@@ -51,21 +51,21 @@
 
 1) Cтворюємо новий проект у GCP
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.001.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.001.png)
 
 1) Створив VPC
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.002.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.002.png)
 
 3)Створюємо віртуальну машину з операційною системою лінукс
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.003.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.003.png)
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.004.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.004.png)
 
 
 
-\4) Виконуємо команди з сайта <https://www.jenkins.io/doc/book/installing/linux/#debianubuntu>
+\4) Виконуємо команди з сайта [https://www.jenkins.io/doc/book/installing/linux/#debianubuntu]()
 
 А саме:
 
@@ -74,7 +74,7 @@
 
 Встановлюємо Jenkins
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.005.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.005.png)
 
 Оновлюємо репозиторій
 
@@ -90,39 +90,39 @@ sudo systemctl start jenkins
 
 Розблукування Jenkins
 
-![Unlock Jenkins page](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.006.jpeg)
+![Unlock Jenkins page](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.006.jpeg)
 
 Для цього пишемо команду sudo cat /var/lib/jenkins/secrets/initialAdminPassword і в командному вікні буде пароль
 
 І ось ми маємо створений Jenkins
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.007.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.007.png)
 
 5)Заходим в ВМ готовую в 3 лабе(Jenkins) и нажимаем ssh
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.008.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.008.png)
 
 6)Устанавливаем git на Jenkins
 
 Прописываем sudo apt install git
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.009.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.009.png)
 
 7) Заходим в Jenkins и устанавливаем plugin git
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.010.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.010.png)
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.011.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.011.png)
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.012.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.012.png)
 
 7) Далее заходим на главную страницу Jenkins и создаем новый Item
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.013.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.013.png)
 
 Пишем название вашего проэкта(любое) и создаем задачу со свободной конфигурацией
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.014.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.014.png)
 
 Далее переходим снова в ssh и генерируем ключи 1 для Jenkins 1 для github командой ssh-keygen
 
@@ -132,29 +132,29 @@ sudo systemctl start jenkins
 
 cd .ssh а потом cat id\_rsa и cat id\_rsa.pub
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.015.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.015.png)
 
 7) Ключ .pub мы вставляем в github
 
 New ssh key, называем как то ключ и вставляем его
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.016.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.016.png)
 
 7) Большой ключ добавляем в Jenkins следующим образом
 
 Заходим в наш созданый item и нажимаем настройки
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.017.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.017.png)
 
 Далее выбираем git и нажимаем Add
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.018.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.018.png)
 
 После заполняем id и Description как вы хотите одинаково
 
 Username заполняем точно также как логин в jenkins
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.019.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.019.png)
 
 Далее в поле key нажимаем add и вставляем ключ id\_rsa
 
@@ -162,33 +162,33 @@ Username заполняем точно также как логин в jenkins
 
 Далее заходим на github и копируем любой репозиторий созданый вами ранее
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.020.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.020.png)
 
 И вставляем в Jenkins в созданый вами item 
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.021.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.021.png)
 
 7) Дублируем ниже и выбираем свой ключ
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.022.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.022.png)
 
 Выбираем данный триггер и сохраняем
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.023.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.023.png)
 
 7) Далее выбираем ваш Item и собрать сейчас
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.024.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.024.png)
 
 7) В левом нижнем углу видем выполнение нашего процеса
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.025.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.025.png)
 
 7) Выбираем наш последний успех и выводим консоль( в моем случае №16) 
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.026.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.026.png)
 
-![](Aspose.Words.a7bbbdfd-9bb5-4699-8512-6902f13e7301.027.png)
+![](Aspose.Words.122958ae-dabc-4adf-893e-bbcef754e65c.027.png)
 
 В консоле мы видим что консоль показало выполнение работы, и вывело сообщение krasivaya knopka,что соответствует моему репозиторию в github.
 
@@ -201,7 +201,4 @@ Username заполняем точно также как логин в jenkins
 
 
 
-ВИСНОВКИ 
-
-В данній лабораторній роботі було виконано маніпуляції з cтворенням віртуальної машини з операційною системою лінукс. За допомогою GCP ми створили VPC і віртуальну машину. Навчився працювати з Google cloud, а також встановлювати і запускати Jenkins.
 
